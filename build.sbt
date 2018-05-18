@@ -1,13 +1,13 @@
-lazy val `sample-play` = project.
-  settings(SampleSettings.commons).
+lazy val `sl-play` = project.
+  settings(SlSettings.commons).
   settings(libraryDependencies ++= Seq(
     guice,
     "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
   )).
   enablePlugins(PlayScala).
-  dependsOn(`sample-domain`)
+  dependsOn(`sl-domain`)
 
-lazy val `sample-domain` = project.
-  settings(SampleSettings.commons)
+lazy val `sl-domain` = project.
+  settings(SlSettings.commons)
 
-lazy val root = Project("sample-root", file("."))
+lazy val root = Project("serious-lunch-root", file("."))
