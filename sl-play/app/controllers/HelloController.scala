@@ -2,7 +2,7 @@ package controllers
 
 import javax.inject.{Inject, Singleton}
 import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Request}
-import serious-lunch.sl.domain.Greeting
+import serious_lunch.sl.domain.Greeting
 
 @Singleton
 class HelloController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
