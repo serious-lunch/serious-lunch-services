@@ -6,4 +6,7 @@ script:
   - sbt ++$TRAVIS_SCALA_VERSION sl-play/test
 
 notifications:
-    slack: dyoshimitsu:5j7sMv4hCVT4cIOByyWFmLCi
+  email: false
+  slack:
+    rooms:
+      secure: Uj727N8wY6Pe1RN0z0E11MKz1c5umE0g2pY8t1BDloAB9+OJfjjuuE5TYVb7vLabKp7roB69jrZPaGHIe/LaPxP5BRr3KO6x/C+csEWr14ZAEMU9xY759ai0ENV7SnsW+KPbscr8f8nuH3hY+f656BuAYEGPGfpoxsiP7E6sHiwbHOp/SHV39a6snCu+SVxY3DptVG5VTqhZuvcC5AsQy5r0yHK03G5dtcOpVCaTo3BR8cgsyKQO/s6bFp2CzcAoj/Yxut4RPEg0LwdthU6ZO3T4MhhpLXPRXDMd75WbroqWGq13JYW6hr7t1OZiu6cAIDhhIOCtd8IE7ZwBClrIphaj78gBSfVgta9KKUyqr6FBxlhi8Zy7MzQImLLy7L1j7Yj8Hd2pWZcxZ1baYCsjKYHoBw54IHEs1qGBspaCikR02bk+g/XkbR+4k4I5OfyloFKpu3bwVzh38hKCocZJGOH42DAV5eMc64kVcxGsOCADVsdc01tdWdLSc7gNL/gZaP6nhDvE9JlgjaXFarMNEFkxQR/31noe6r8ia1ppVFGoy8nMPmU1QB/xVOiGbqRNzyKNWAJl9+c1OvzozjpYaOM2wR5sP8at87GSOm4g+RfzmFHs/DO08cI4yGrvVgCoofBnmQGLdhY1EYYp2qbbWXCwE/wtrdIISXNS9ZhrTBs=
