@@ -3,6 +3,8 @@ language: scala
 scala: 2.12.6
 
 script:
+  - sbt ++$TRAVIS_SCALA_VERSION scalafmtSbtCheck
+  - sbt ++$TRAVIS_SCALA_VERSION sl-linter/scalafmtCheck
   - sbt ++$TRAVIS_SCALA_VERSION sl-play/test
 
 notifications:

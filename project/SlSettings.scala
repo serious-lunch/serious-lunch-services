@@ -3,16 +3,17 @@ import Keys._
 import sbt.Def.SettingList
 
 object SlSettings {
-  lazy val commons = new SettingList(Seq(
-    scalaVersion := "2.12.6",
-    scalacOptions ++= Seq(
-      "-deprecation",
-      "-feature",
-      "-unchecked",
-      "-Xfuture",
-    ),
-    libraryDependencies ++= Seq(
-      "org.scalatest" %% "scalatest" % "3.0.4" % Test,
-    ),
-  ))
+  lazy val commons = new SettingList(
+    Seq(
+      scalaVersion := "2.12.6",
+      scalacOptions ++= Seq(
+        "-deprecation",
+        "-feature",
+        "-unchecked",
+        "-Xfuture",
+      ),
+      libraryDependencies ++= Seq(
+        "org.scalatest" %% "scalatest" % "3.0.4" % Test,
+      ),
+    ))
 }
