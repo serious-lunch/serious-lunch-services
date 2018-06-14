@@ -10,7 +10,8 @@ lazy val `sl-play` = project
 
 lazy val `sl-domain` = project.settings(SlSettings.commons)
 
-lazy val `sl-linter` = project.aggregate(
+lazy val `sl-tester` = project.aggregate(
+  `sl-domain`,
   `sl-play`,
 )
 
