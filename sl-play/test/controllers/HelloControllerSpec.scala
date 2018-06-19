@@ -9,10 +9,12 @@ class HelloControllerSpec extends PlaySpec with GuiceOneAppPerSuite {
 
   "An index action" should {
     "return 200" in {
-      val Some(hello) = route(app, FakeRequest(
-        method = GET,
-        path = "/hello",
-      ))
+      val Some(hello) = route(
+        app,
+        FakeRequest(
+          method = GET,
+          path = "/hello",
+        ))
       status(hello) mustEqual OK
     }
   }
