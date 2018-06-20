@@ -8,11 +8,20 @@ lazy val `sl-play` = project
   .enablePlugins(PlayScala)
   .dependsOn(`sl-domain`)
 
-lazy val `sl-domain` = project.settings(SlSettings.commons)
+lazy val `sl-domain` = project
+  .settings(version := "1.0-SNAPSHOT")
+  .settings(SlSettings.commons)
+
+lazy val `sl-repository` = project
+  .settings(version := "1.0-SNAPSHOT")
+  .settings(SlSettings.commons)
+  .settings(SqlServerSettings.commons)
+  .settings(ScalikeSettings.commons)
 
 lazy val `sl-tester` = project.aggregate(
   `sl-domain`,
   `sl-play`,
+  `sl-repository`,
 )
 
 lazy val root = Project("serious-lunch-root", file("."))
