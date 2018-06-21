@@ -14,6 +14,7 @@ object SlSettings {
       ),
       libraryDependencies ++= Seq(
         "org.scalatest" %% "scalatest" % "3.0.4" % Test,
+        "ch.qos.logback" % "logback-classic" % "1.2.3",
       ),
     ))
 }
