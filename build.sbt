@@ -15,7 +15,7 @@ lazy val `sl-domain` = project
 lazy val `sl-repository` = project
   .settings(version := "1.0-SNAPSHOT")
   .settings(SlSettings.commons)
-  .settings(SqlServerSettings.commons)
+  .settings(MySqlSettings.commons)
   .settings(ScalikeSettings.commons)
 
 lazy val `sl-tester` = project.aggregate(
