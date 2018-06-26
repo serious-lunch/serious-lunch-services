@@ -1,4 +1,4 @@
-package serious_lunch.repository.net_pay
+package serious_lunch.repository.account_activations
 
 import java.time.ZonedDateTime
 
