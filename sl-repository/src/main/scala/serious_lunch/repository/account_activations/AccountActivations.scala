@@ -9,4 +9,8 @@ object AccountActivations
 
 case class AccountActivations(
     account_id: Long,
+    activation_digest: String,
+    activated: Boolean,
+    created_at: ZonedDateTime,
+    updated_at: ZonedDateTime,
 )
