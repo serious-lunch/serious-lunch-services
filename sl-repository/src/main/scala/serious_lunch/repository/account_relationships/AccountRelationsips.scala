@@ -4,7 +4,8 @@ import java.time.ZonedDateTime
 
 import serious_lunch.repository.core.SeriousLunchTable
 
-object AccountRelationsips extends SeriousLunchTable[AccountRelationsips]("account_relationships")
+object AccountRelationsips
+  extends SeriousLunchTable[AccountRelationsips]("account_relationships")
 
 case class AccountRelationsips(
     follower_account_id: Long,
