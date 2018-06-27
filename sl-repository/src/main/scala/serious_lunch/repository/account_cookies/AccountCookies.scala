@@ -4,8 +4,7 @@ import java.time.ZonedDateTime
 
 import serious_lunch.repository.core.SeriousLunchTable
 
-object AccountCookies
-  extends SeriousLunchTable[AccountCookies]("account_cookies")
+object AccountCookies extends SeriousLunchTable[AccountCookies]("account_cookies")
 
 case class AccountCookies(
     account_id: Long,
