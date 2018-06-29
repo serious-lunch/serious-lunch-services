@@ -4,8 +4,7 @@ import java.time.ZonedDateTime
 
 import serious_lunch.repository.core.SeriousLunchTable
 
-object AccountResets
-  extends SeriousLunchTable[AccountResets]("account_resets")
+object AccountResets extends SeriousLunchTable[AccountResets]("account_resets")
 
 case class AccountResets(
     account_id: Long,
