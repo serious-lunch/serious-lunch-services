@@ -16,5 +16,10 @@ object SlSettings {
         "org.scalatest" %% "scalatest" % "3.0.4" % Test,
         "ch.qos.logback" % "logback-classic" % "1.2.3",
       ),
+      (unmanagedResourceDirectories in Compile) += resources,
     ))
+
+  lazy val resources: File = root.base.getAbsoluteFile / "resources"
+
+  private lazy val root = project in file(".")
 }
