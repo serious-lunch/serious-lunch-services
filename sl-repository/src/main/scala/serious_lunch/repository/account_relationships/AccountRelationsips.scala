@@ -8,6 +8,7 @@ object AccountRelationsips
   extends SeriousLunchTable[AccountRelationsips]("account_relationships")
 
 case class AccountRelationsips(
+    account_relationship_id: Long,
     follower_account_id: Long,
     followed_account_id: Long,
     created_at: ZonedDateTime,
