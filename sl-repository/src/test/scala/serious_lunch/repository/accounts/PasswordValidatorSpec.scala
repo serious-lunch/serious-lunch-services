@@ -7,4 +7,8 @@ class PasswordValidatorSpec extends FlatSpec with Matchers {
   it should "return true because of the correct password" in {
 
   }
+
+  it should "return false because of the typo password" in {
+
+  }
 }
