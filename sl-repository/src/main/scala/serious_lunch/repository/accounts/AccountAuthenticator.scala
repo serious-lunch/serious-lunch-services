@@ -1,4 +1,8 @@
 package serious_lunch.repository.accounts
 
-class AccountAuthenticator(account: AccountRecord) (
-)
+class AccountAuthenticator(account: AccountRecord){
+
+  def authenticate(password: String): Boolean = {
+    true
+  }
+}
