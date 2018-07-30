@@ -5,4 +5,7 @@ class AccountAuthenticator(account: AccountRecord){
   def authenticate(password: String): Boolean = {
     true
   }
+
+  private def passwordEqualTo(password: String) = {
+  }
 }
