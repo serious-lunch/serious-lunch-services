@@ -2,10 +2,11 @@ package serious_lunch.repository.accounts
 
 class AccountAuthenticator(account: AccountRecord){
 
-  def authenticate(password: String): Boolean = {
+  def isActivationAuthenticated(password: String): Boolean = {
     true
   }
 
-  private def passwordEqualTo(password: String) = {
+  private def isAuthenticate(password: String): Boolean = {
+    true
   }
 }
