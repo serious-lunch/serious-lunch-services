@@ -6,6 +6,10 @@ class AccountAuthenticator(account: AccountRecord){
     isAuthenticate(password)
   }
 
+  def isRememberAuthenticated(token: String): Boolean = {
+    isAuthenticate(token)
+  }
+
   private def isAuthenticate(token: String): Boolean = {
     true
   }
