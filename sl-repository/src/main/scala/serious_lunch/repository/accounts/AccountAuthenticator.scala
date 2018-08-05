@@ -11,6 +11,10 @@ class AccountAuthenticator(account: AccountRecord){
     isAuthenticate(token)
   }
 
+  def isResetAuthenticated(token: String): Boolean = {
+    isAuthenticate(token)
+  }
+
   private def isAuthenticate(token: String): Boolean = {
     true
   }
