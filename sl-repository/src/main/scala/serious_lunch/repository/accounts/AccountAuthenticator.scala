@@ -3,7 +3,8 @@ package serious_lunch.repository.accounts
 class AccountAuthenticator(account: AccountRecord){
 
   def isActivationAuthenticated(password: String): Boolean = {
-    isAuthenticate(password)
+    val token = password
+    isAuthenticate(token)
   }
 
   def isRememberAuthenticated(token: String): Boolean = {
