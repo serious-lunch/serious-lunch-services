@@ -1,6 +1,7 @@
 package serious_lunch.repository.accounts
 
 class AccountAuthenticator(account: AccountRecord){
+  val bcrypt = new BCryptPasswordEncoder()
 
   def isActivationAuthenticated(password: String): Boolean = {
     val token = password
