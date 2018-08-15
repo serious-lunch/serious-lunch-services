@@ -1,5 +1,7 @@
 package serious_lunch.repository.accounts
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
+
 class AccountAuthenticator(account: AccountRecord){
   val bcrypt = new BCryptPasswordEncoder()
 
