@@ -1,14 +1,18 @@
 package serious_lunch.repository.accounts
 
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.{FunSpec, Matchers}
 
-class AccountAuthenticatorSpec extends FlatSpec with Matchers {
+class AccountAuthenticatorSpec extends FunSpec with Matchers {
 
-  it should "return true because of the correct password" in {
+  describe("because of the correct password") {
+    it("return true") {
 
+    }
   }
 
-  it should "return false because of the typo password" in {
+  describe("because of the typo password") {
+    it("return false") {
 
+    }
   }
 }
