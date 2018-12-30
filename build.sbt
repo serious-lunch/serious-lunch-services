@@ -17,6 +17,7 @@ lazy val `sl-repository` = project
   .settings(SlSettings.commons)
   .settings(MySqlSettings.commons)
   .settings(ScalikeSettings.commons)
+  .settings(BCryptSettings.commons)
 
 lazy val `sl-tester` = project.aggregate(
   `sl-domain`,
