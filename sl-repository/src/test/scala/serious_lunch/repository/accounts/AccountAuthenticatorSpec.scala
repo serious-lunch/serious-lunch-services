@@ -5,14 +5,10 @@ import org.scalatest.{FunSpec, Matchers}
 class AccountAuthenticatorSpec extends FunSpec with Matchers {
 
   describe("because of the correct password") {
-    it("return true") {
-
-    }
+    it("return true") {}
   }
 
   describe("because of the typo password") {
-    it("return false") {
-
-    }
+    it("return false") {}
   }
 }
