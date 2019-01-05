@@ -13,7 +13,7 @@ object SlSettings {
         "-Xfuture",
       ),
       libraryDependencies ++= Seq(
-        "org.scalatest" %% "scalatest" % "3.0.4" % Test,
+        "org.scalatest" %% "scalatest" % "3.0.5" % Test,
         "ch.qos.logback" % "logback-classic" % "1.2.3",
       ),
       (unmanagedResourceDirectories in Compile) += resources,
