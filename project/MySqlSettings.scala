@@ -6,7 +6,7 @@ object MySqlSettings {
   lazy val commons = new SettingList(
     Seq(
       libraryDependencies ++= Seq(
-        "mysql" % "mysql-connector-java" % "5.1.46",
+        "mysql" % "mysql-connector-java" % "8.0.13",
       ),
     ))
 }
