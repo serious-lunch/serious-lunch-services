@@ -1,11 +1,16 @@
 package controllers
 
 import javax.inject.{Inject, Singleton}
-import play.api.mvc.{AbstractController, ControllerComponents}
+import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Request}
 
 @Singleton
 class AccountRelationshipsController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
-  def create() = play.mvc.Results.TODO
-  def destroy(account_relationship_id: Long) = play.mvc.Results.TODO
+  def create() = Action { request: Request[AnyContent] =>
+    Ok
+  }
+
+  def destroy(account_relationship_id: Long) = Action { request: Request[AnyContent] =>
+    Ok
+  }
 }

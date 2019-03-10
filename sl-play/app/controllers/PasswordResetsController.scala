@@ -1,11 +1,16 @@
 package controllers
 
 import javax.inject.{Inject, Singleton}
-import play.api.mvc.{AbstractController, ControllerComponents}
+import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Request}
 
 @Singleton
 class PasswordResetsController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
-  def create() = play.mvc.Results.TODO
-  def update(reset_token: String) = play.mvc.Results.TODO
+  def create() = Action { request: Request[AnyContent] =>
+    Ok
+  }
+
+  def update(reset_token: String) = Action { request: Request[AnyContent] =>
+    Ok
+  }
 }
