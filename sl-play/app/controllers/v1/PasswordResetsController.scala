@@ -4,7 +4,8 @@ import javax.inject.{Inject, Singleton}
 import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Request}
 
 @Singleton
-class PasswordResetsController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+class PasswordResetsController @Inject()(cc: ControllerComponents)
+  extends AbstractController(cc) {
 
   def create() = Action { request: Request[AnyContent] =>
     Ok
