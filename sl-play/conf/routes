@@ -1,1 +1,29 @@
 GET    /hello    controllers.HelloController.index
+
+# SessionTokens
+POST   /v1/session_tokens                      controllers.v1.SessionTokensController.create
+DELETE /v1/session_tokens/:session_token_id    controllers.v1.SessionTokensController.destroy(session_token_id: Long)
+
+# Accounts
+POST   /v1/accounts                 controllers.v1.AccountsController.create
+GET    /v1/accounts                 controllers.v1.AccountsController.index
+GET    /v1/accounts/:account_id     controllers.v1.AccountsController.show(account_id: Long)
+PUT    /v1/accounts/:account_id     controllers.v1.AccountsController.update(account_id: Long)
+
+# AccountActivations
+PUT    /v1/account_activations/:activation_token    controllers.v1.AccountActivationsController.update(activation_token: String)
+
+# PasswordResets
+POST   /v1/password_resets/                controllers.v1.PasswordResetsController.create
+PUT    /v1/password_resets/:reset_token    controllers.v1.PasswordResetsController.update(reset_token: String)
+
+# AccountRelationship
+POST   /v1/account_relationships                             controllers.v1.AccountRelationshipsController.create
+DELETE /v1/account_relationships/:account_relationship_id    controllers.v1.AccountRelationshipsController.destroy(account_relationship_id: Long)
+
+# Lunches
+POST   /v1/lunches              controllers.v1.LunchesController.create
+GET    /v1/lunches              controllers.v1.LunchesController.index
+GET    /v1/lunches/:lunch_id    controllers.v1.LunchesController.show(lunch_id: Long)
+PUT    /v1/lunches/:lunch_id    controllers.v1.LunchesController.update(lunch_id: Long)
+DELETE /v1/lunches/:lunch_id    controllers.v1.LunchesController.destroy(lunch_id: Long)
