@@ -1,4 +1,5 @@
 GET    /hello    controllers.HelloController.index
+GET    /healthcheck   controllers.HealthCheckController.index
 
 # SessionTokens
 POST   /v1/session_tokens                      controllers.v1.SessionTokensController.create
