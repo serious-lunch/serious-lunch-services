@@ -1,12 +1,12 @@
-package serious_lunch.repository.account_resets
+package serious_lunch.repository.account_reset
 
 import java.time.ZonedDateTime
 
 import serious_lunch.repository.core.SeriousLunchTable
 
-object AccountResets extends SeriousLunchTable[AccountResets]("account_resets")
+object AccountReset extends SeriousLunchTable[AccountReset]("account_resets")
 
-case class AccountResets(
+case class AccountReset(
     account_id: Long,
     reset_digest: String,
     created_at: ZonedDateTime,

@@ -1,13 +1,13 @@
-package serious_lunch.repository.account_activations
+package serious_lunch.repository.account_activation
 
 import java.time.ZonedDateTime
 
 import serious_lunch.repository.core.SeriousLunchTable
 
-object AccountActivations
-  extends SeriousLunchTable[AccountActivations]("account_activations")
+object AccountActivation
+  extends SeriousLunchTable[AccountActivation]("account_activations")
 
-case class AccountActivations(
+case class AccountActivation(
     account_id: Long,
     activation_digest: String,
     activated: Boolean,
