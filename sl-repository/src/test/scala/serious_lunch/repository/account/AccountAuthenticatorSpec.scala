@@ -1,4 +1,4 @@
-package serious_lunch.repository.accounts
+package serious_lunch.repository.account
 
 import org.scalatest.{FunSpec, Matchers}
 
