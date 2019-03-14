@@ -1,13 +1,13 @@
-package serious_lunch.repository.lunches
+package serious_lunch.repository.lunch
 
 import java.util.Date
 import java.time.ZonedDateTime
 
 import serious_lunch.repository.core.SeriousLunchTable
 
-object Lunches extends SeriousLunchTable[Lunches]("lunches")
+object Lunch extends SeriousLunchTable[Lunch]("lunches")
 
-case class Lunches(
+case class Lunch(
     lunch_id: Long,
     account_id: Long,
     lunch_date: Date,

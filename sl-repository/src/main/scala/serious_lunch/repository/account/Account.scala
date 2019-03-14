@@ -1,12 +1,12 @@
-package serious_lunch.repository.accounts
+package serious_lunch.repository.account
 
 import java.time.ZonedDateTime
 
 import serious_lunch.repository.core.SeriousLunchTable
 
-object Accounts extends SeriousLunchTable[Accounts]("accounts")
+object Account extends SeriousLunchTable[Account]("accounts")
 
-case class Accounts(
+case class Account(
     account_id: Long,
     account_name: String,
     email_address: String,
