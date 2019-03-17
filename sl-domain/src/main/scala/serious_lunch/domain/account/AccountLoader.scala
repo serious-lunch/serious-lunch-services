@@ -7,7 +7,7 @@ import serious_lunch.repository.account.{AccountRecord, AccountStore}
 
 object AccountLoader {
 
-  def findByAccountId(accountId: Long): Either[AccountLoaderError, Account] = {
+  def findById(accountId: Long): Either[AccountLoaderError, Account] = {
     try {
       DatabaseHolder.connectWithSeriousLunch.localTx { implicit session =>
         for {

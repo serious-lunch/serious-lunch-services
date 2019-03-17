@@ -18,7 +18,7 @@ class AccountsController @Inject()(cc: ControllerComponents)
   }
 
   def show(account_id: Long) = Action { request: Request[AnyContent] =>
-    AccountLoader.findByAccountId(account_id) match {
+    AccountLoader.findById(account_id) match {
       case Right(account) =>
         Ok(Json.toJson(account))
       case Left(_) =>
