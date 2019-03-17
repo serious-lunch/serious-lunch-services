@@ -4,7 +4,7 @@ import ai.x.play.json.Jsonx
 import play.api.libs.json.Format
 
 case class Account(
-  accountId: Long,
+    accountId: Long,
 )
 
 object Account {
