@@ -13,13 +13,13 @@ object AccountStore {
         .where
         .eq(a.accountId, accountId)
     }.map { rs =>
-      AccountRecord(
-        accountId = rs.long(a.resultName.accountId),
-        accountName = rs.string(a.resultName.accountName),
-        emailAddress = rs.string(a.resultName.emailAddress),
-        passwordDigest = rs.string(a.resultName.passwordDigest),
-      )
-    }
+        AccountRecord(
+          accountId = rs.long(a.resultName.accountId),
+          accountName = rs.string(a.resultName.accountName),
+          emailAddress = rs.string(a.resultName.emailAddress),
+          passwordDigest = rs.string(a.resultName.passwordDigest),
+        )
+      }
       .single
       .apply()
   }
