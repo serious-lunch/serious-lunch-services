@@ -8,10 +8,10 @@ import serious_lunch.repository.core.SeriousLunchTable
 object Lunch extends SeriousLunchTable[Lunch]("lunches")
 
 case class Lunch(
-    lunch_id: Long,
-    account_id: Long,
-    lunch_date: Date,
+    lunchId: Long,
+    accountId: Long,
+    lunchDate: Date,
     comment: Option[String],
-    created_at: ZonedDateTime,
-    updated_at: ZonedDateTime,
+    createdAt: ZonedDateTime,
+    updatedAt: ZonedDateTime,
 )

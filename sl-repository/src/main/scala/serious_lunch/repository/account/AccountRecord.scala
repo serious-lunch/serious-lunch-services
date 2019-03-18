@@ -1,8 +1,8 @@
 package serious_lunch.repository.account
 
 case class AccountRecord(
-    account_id: Long,
-    account_name: String,
-    email_address: String,
-    password_digest: String,
+    accountId: Long,
+    accountName: String,
+    emailAddress: String,
+    passwordDigest: String,
 )
