@@ -7,10 +7,10 @@ import serious_lunch.repository.core.SeriousLunchTable
 object Account extends SeriousLunchTable[Account]("accounts")
 
 case class Account(
-    account_id: Long,
-    account_name: String,
-    email_address: String,
-    password_digest: String,
-    created_at: ZonedDateTime,
-    updated_at: ZonedDateTime,
+    accountId: Long,
+    accountName: String,
+    emailAddress: String,
+    passwordDigest: String,
+    createdAt: ZonedDateTime,
+    updatedAt: ZonedDateTime,
 )
