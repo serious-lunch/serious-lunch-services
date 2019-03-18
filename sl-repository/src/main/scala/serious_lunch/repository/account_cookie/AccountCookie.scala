@@ -7,8 +7,8 @@ import serious_lunch.repository.core.SeriousLunchTable
 object AccountCookie extends SeriousLunchTable[AccountCookie]("account_cookies")
 
 case class AccountCookie(
-    account_id: Long,
-    remember_digest: String,
-    created_at: ZonedDateTime,
-    updated_at: ZonedDateTime,
+    accountId: Long,
+    rememberDigest: String,
+    createdAt: ZonedDateTime,
+    updatedAt: ZonedDateTime,
 )

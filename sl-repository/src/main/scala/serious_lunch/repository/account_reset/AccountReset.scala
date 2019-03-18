@@ -7,8 +7,8 @@ import serious_lunch.repository.core.SeriousLunchTable
 object AccountReset extends SeriousLunchTable[AccountReset]("account_resets")
 
 case class AccountReset(
-    account_id: Long,
-    reset_digest: String,
-    created_at: ZonedDateTime,
-    updated_at: ZonedDateTime,
+    accountId: Long,
+    resetDigest: String,
+    createdAt: ZonedDateTime,
+    updatedAt: ZonedDateTime,
 )

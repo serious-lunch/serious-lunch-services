@@ -8,9 +8,9 @@ object AccountActivation
   extends SeriousLunchTable[AccountActivation]("account_activations")
 
 case class AccountActivation(
-    account_id: Long,
-    activation_digest: String,
+    accountId: Long,
+    activationDigest: String,
     activated: Boolean,
-    created_at: ZonedDateTime,
-    updated_at: ZonedDateTime,
+    createdAt: ZonedDateTime,
+    updatedAt: ZonedDateTime,
 )
