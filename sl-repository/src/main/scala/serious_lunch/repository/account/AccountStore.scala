@@ -10,7 +10,7 @@ object AccountStore {
     sql"""
          SELECT ${a.result.*}
          FROM ${Account.as(a)}
-         WHERE ${a.account_id} = ${accountId}
+         WHERE ${a.accountId} = ${accountId}
       """
       .map(*)
       .single
@@ -21,10 +21,10 @@ object AccountStore {
 
   private val * = (rs: WrappedResultSet) =>
     AccountRecord(
-      account_id = rs.long(a.resultName.account_id),
-      account_name = rs.string(a.resultName.account_name),
-      email_address = rs.string(a.resultName.email_address),
-      password_digest = rs.string(a.resultName.password_digest),
+      accountId = rs.long(a.resultName.accountId),
+      accountName = rs.string(a.resultName.accountName),
+      emailAddress = rs.string(a.resultName.emailAddress),
+      passwordDigest = rs.string(a.resultName.passwordDigest),
   )
 
 }

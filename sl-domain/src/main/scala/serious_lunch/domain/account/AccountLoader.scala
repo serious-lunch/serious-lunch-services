@@ -14,7 +14,7 @@ object AccountLoader {
           account <- findAccount(accountId)
         } yield {
           Account(
-            accountId = account.account_id,
+            accountId = account.accountId,
           )
         }
       }
