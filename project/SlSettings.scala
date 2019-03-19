@@ -15,6 +15,9 @@ object SlSettings {
       libraryDependencies ++= Seq(
         "org.scalatest" %% "scalatest" % "3.0.5" % Test,
         "ch.qos.logback" % "logback-classic" % "1.2.3",
+        "ch.qos.logback.contrib" % "logback-json-core" % "0.1.5",
+        "ch.qos.logback.contrib" % "logback-json-classic" % "0.1.5",
+        "ch.qos.logback.contrib" % "logback-jackson" % "0.1.5",
       ),
       (unmanagedResourceDirectories in Compile) += resources,
     ))
