@@ -15,6 +15,8 @@ object AccountLoader {
         } yield {
           Account(
             accountId = account.accountId,
+            accountName = account.accountName,
+            emailAddress = account.emailAddress,
           )
         }
       }

@@ -5,6 +5,8 @@ import play.api.libs.json.Format
 
 case class Account(
     accountId: Long,
+    accountName: String,
+    emailAddress: String,
 )
 
 object Account {
