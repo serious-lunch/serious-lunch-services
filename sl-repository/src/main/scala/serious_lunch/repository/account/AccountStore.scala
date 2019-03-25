@@ -1,23 +1,19 @@
 package serious_lunch.repository.account
 
-import scalikejdbc.{DBSession, select, withSQL}
+import scalikejdbc.{DBSession, WrappedResultSet}
+import scalikejdbc.interpolation.Implicits._
 
 object AccountStore {
 
   def findById(accountId: Long)(implicit session: DBSession): Option[AccountRecord] = {
-    val a = Account.syntax("a")
 
-    withSQL {
-      select
-        .from(Account as a)
-        .where
-        .eq(a.accountId, accountId)
-    }.map { rs =>
+    sql"select * from accounts where account_id = ${accountId}"
+      .map { rs: WrappedResultSet =>
         AccountRecord(
-          accountId = rs.long(a.resultName.accountId),
-          accountName = rs.string(a.resultName.accountName),
-          emailAddress = rs.string(a.resultName.emailAddress),
-          passwordDigest = rs.string(a.resultName.passwordDigest),
+          accountId = rs.long("account_id"),
+          accountName = rs.string("account_name"),
+          emailAddress = rs.string("email_address"),
+          passwordDigest = rs.string("password_digest"),
         )
       }
       .single
