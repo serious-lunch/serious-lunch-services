@@ -16,15 +16,15 @@ PUT    /v1/account_activations/:activationToken                  controllers.v1.
 
 # PasswordResets
 POST   /v1/password_resets/                                      controllers.v1.PasswordResetsController.create
-PUT    /v1/password_resets/:reset_token                          controllers.v1.PasswordResetsController.update(reset_token: String)
+PUT    /v1/password_resets/:resetToken                           controllers.v1.PasswordResetsController.update(resetToken: String)
 
 # AccountRelationship
 POST   /v1/account_relationships                                 controllers.v1.AccountRelationshipsController.create
 DELETE /v1/account_relationships/:account_relationship_id        controllers.v1.AccountRelationshipsController.destroy(account_relationship_id: Long)
 
 # Lunches
-POST   /v1/lunches              controllers.v1.LunchesController.create
-GET    /v1/lunches              controllers.v1.LunchesController.index
+POST   /v1/lunches                                               controllers.v1.LunchesController.create
+GET    /v1/lunches                                               controllers.v1.LunchesController.index
 GET    /v1/lunches/:lunch_id    controllers.v1.LunchesController.show(lunch_id: Long)
 PUT    /v1/lunches/:lunch_id    controllers.v1.LunchesController.update(lunch_id: Long)
 DELETE /v1/lunches/:lunch_id    controllers.v1.LunchesController.destroy(lunch_id: Long)
