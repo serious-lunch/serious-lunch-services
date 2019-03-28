@@ -15,15 +15,15 @@ class LunchesController @Inject()(cc: ControllerComponents)
     Ok
   }
 
-  def show(lunch_id: Long) = Action { request: Request[AnyContent] =>
+  def show(lunchId: Long) = Action { request: Request[AnyContent] =>
     Ok
   }
 
-  def update(lunch_id: Long) = Action { request: Request[AnyContent] =>
+  def update(lunchId: Long) = Action { request: Request[AnyContent] =>
     Ok
   }
 
-  def destroy(lunch_id: Long) = Action { request: Request[AnyContent] =>
+  def destroy(lunchId: Long) = Action { request: Request[AnyContent] =>
     Ok
   }
 }

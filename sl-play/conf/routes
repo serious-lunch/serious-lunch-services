@@ -25,6 +25,6 @@ DELETE /v1/account_relationships/:accountRelationshipId        controllers.v1.Ac
 # Lunches
 POST   /v1/lunches                                             controllers.v1.LunchesController.create
 GET    /v1/lunches                                             controllers.v1.LunchesController.index
-GET    /v1/lunches/:lunch_id                                   controllers.v1.LunchesController.show(lunch_id: Long)
-PUT    /v1/lunches/:lunch_id                                   controllers.v1.LunchesController.update(lunch_id: Long)
-DELETE /v1/lunches/:lunch_id                                   controllers.v1.LunchesController.destroy(lunch_id: Long)
+GET    /v1/lunches/:lunchId                                    controllers.v1.LunchesController.show(lunchId: Long)
+PUT    /v1/lunches/:lunchId                                    controllers.v1.LunchesController.update(lunchId: Long)
+DELETE /v1/lunches/:lunchId                                    controllers.v1.LunchesController.destroy(lunchId: Long)
