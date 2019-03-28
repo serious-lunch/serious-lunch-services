@@ -3,24 +3,24 @@ GET    /healthcheck                                     controllers.HealthCheckC
 
 # SessionTokens
 POST   /v1/session_tokens                               controllers.v1.SessionTokensController.create
-DELETE /v1/session_tokens/:sessionTokenId               controllers.v1.SessionTokensController.destroy(sessionTokenId: Long)
+DELETE /v1/session_tokens/:sessionTokenId                        controllers.v1.SessionTokensController.destroy(sessionTokenId: Long)
 
 # Accounts
-POST   /v1/accounts                                     controllers.v1.AccountsController.create
-GET    /v1/accounts                                     controllers.v1.AccountsController.index
-GET    /v1/accounts/:accountId                          controllers.v1.AccountsController.show(accountId: Long)
-PUT    /v1/accounts/:accountId                          controllers.v1.AccountsController.update(accountId: Long)
+POST   /v1/accounts                                              controllers.v1.AccountsController.create
+GET    /v1/accounts                                              controllers.v1.AccountsController.index
+GET    /v1/accounts/:accountId                                   controllers.v1.AccountsController.show(accountId: Long)
+PUT    /v1/accounts/:accountId                                   controllers.v1.AccountsController.update(accountId: Long)
 
 # AccountActivations
-PUT    /v1/account_activations/:activation_token        controllers.v1.AccountActivationsController.update(activation_token: String)
+PUT    /v1/account_activations/:activationToken                  controllers.v1.AccountActivationsController.update(activationToken: String)
 
 # PasswordResets
-POST   /v1/password_resets/                             controllers.v1.PasswordResetsController.create
-PUT    /v1/password_resets/:reset_token                 controllers.v1.PasswordResetsController.update(reset_token: String)
+POST   /v1/password_resets/                                      controllers.v1.PasswordResetsController.create
+PUT    /v1/password_resets/:reset_token                          controllers.v1.PasswordResetsController.update(reset_token: String)
 
 # AccountRelationship
-POST   /v1/account_relationships                             controllers.v1.AccountRelationshipsController.create
-DELETE /v1/account_relationships/:account_relationship_id    controllers.v1.AccountRelationshipsController.destroy(account_relationship_id: Long)
+POST   /v1/account_relationships                                 controllers.v1.AccountRelationshipsController.create
+DELETE /v1/account_relationships/:account_relationship_id        controllers.v1.AccountRelationshipsController.destroy(account_relationship_id: Long)
 
 # Lunches
 POST   /v1/lunches              controllers.v1.LunchesController.create

@@ -7,7 +7,7 @@ import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Reque
 class AccountActivationsController @Inject()(cc: ControllerComponents)
   extends AbstractController(cc) {
 
-  def update(activation_token: String) = Action { request: Request[AnyContent] =>
+  def update(activationToken: String) = Action { request: Request[AnyContent] =>
     Ok
   }
 }
