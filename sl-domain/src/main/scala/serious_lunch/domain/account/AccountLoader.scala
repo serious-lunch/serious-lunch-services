@@ -1,15 +1,14 @@
 package serious_lunch.domain.account
 
-import scalikejdbc.DBSession
+import scalikejdbc.{DB, DBSession}
 import serious_lunch.model.Account
-import serious_lunch.repository.DatabaseHolder
 import serious_lunch.repository.account.{AccountRecord, AccountStore}
 
 object AccountLoader {
 
   def findById(accountId: Long): Either[AccountLoaderError, Account] = {
     try {
-      DatabaseHolder.connectWithSeriousLunch.localTx { implicit session =>
+      DB.readOnly { implicit session =>
         for {
           account <- findAccount(accountId)
         } yield {
