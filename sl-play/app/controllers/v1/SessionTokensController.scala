@@ -11,7 +11,7 @@ class SessionTokensController @Inject()(cc: ControllerComponents)
     Ok
   }
 
-  def destroy(session_token_id: Long) = Action { request: Request[AnyContent] =>
+  def destroy(sessionTokenId: Long) = Action { request: Request[AnyContent] =>
     Ok
   }
 }
