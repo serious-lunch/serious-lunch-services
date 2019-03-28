@@ -1,15 +1,15 @@
-GET    /hello                                           controllers.HelloController.index
-GET    /healthcheck                                     controllers.HealthCheckController.index
+GET    /hello                                                  controllers.HelloController.index
+GET    /healthcheck                                            controllers.HealthCheckController.index
 
 # SessionTokens
-POST   /v1/session_tokens                               controllers.v1.SessionTokensController.create
-DELETE /v1/session_tokens/:sessionTokenId                        controllers.v1.SessionTokensController.destroy(sessionTokenId: Long)
+POST   /v1/session_tokens                                      controllers.v1.SessionTokensController.create
+DELETE /v1/session_tokens/:sessionTokenId                      controllers.v1.SessionTokensController.destroy(sessionTokenId: Long)
 
 # Accounts
-POST   /v1/accounts                                              controllers.v1.AccountsController.create
-GET    /v1/accounts                                              controllers.v1.AccountsController.index
-GET    /v1/accounts/:accountId                                   controllers.v1.AccountsController.show(accountId: Long)
-PUT    /v1/accounts/:accountId                                   controllers.v1.AccountsController.update(accountId: Long)
+POST   /v1/accounts                                            controllers.v1.AccountsController.create
+GET    /v1/accounts                                            controllers.v1.AccountsController.index
+GET    /v1/accounts/:accountId                                 controllers.v1.AccountsController.show(accountId: Long)
+PUT    /v1/accounts/:accountId                                 controllers.v1.AccountsController.update(accountId: Long)
 
 # AccountActivations
 PUT    /v1/account_activations/:activationToken                controllers.v1.AccountActivationsController.update(activationToken: String)
