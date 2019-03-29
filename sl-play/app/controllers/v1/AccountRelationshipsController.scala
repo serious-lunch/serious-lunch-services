@@ -11,7 +11,7 @@ class AccountRelationshipsController @Inject()(cc: ControllerComponents)
     Ok
   }
 
-  def destroy(account_relationship_id: Long) = Action { request: Request[AnyContent] =>
+  def destroy(accountRelationshipId: Long) = Action { request: Request[AnyContent] =>
     Ok
   }
 }

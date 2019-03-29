@@ -11,7 +11,7 @@ class PasswordResetsController @Inject()(cc: ControllerComponents)
     Ok
   }
 
-  def update(reset_token: String) = Action { request: Request[AnyContent] =>
+  def update(resetToken: String) = Action { request: Request[AnyContent] =>
     Ok
   }
 }
