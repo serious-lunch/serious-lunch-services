@@ -6,7 +6,6 @@ lazy val `sl-play` = project
       "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
     ),
       javaOptions in Test += {
-      // see logback-test.xml
       "-Dapplication.home=" + root.base.absolutePath
     },
   )
