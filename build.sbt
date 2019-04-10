@@ -4,8 +4,14 @@ lazy val `sl-play` = project
     libraryDependencies ++= Seq(
       guice,
       "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
-    ))
+    ),
+      javaOptions in Test += {
+      // see logback-test.xml
+      "-Dapplication.home=" + root.base.absolutePath
+    },
+  )
   .enablePlugins(PlayScala)
+  .disablePlugins(PlayLogback)
   .dependsOn(`sl-domain`)
 
 lazy val `sl-domain` = project
