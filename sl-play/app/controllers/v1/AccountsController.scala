@@ -3,7 +3,7 @@ package controllers.v1
 import javax.inject.{Inject, Singleton}
 import play.api.libs.json.Json
 import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Request}
-import serious_lunch.domain.account.AccountLoader
+import serious_lunch.domain.account.{AccountLoader, AccountNotFound}
 
 @Singleton
 class AccountsController @Inject()(cc: ControllerComponents)
@@ -21,6 +21,8 @@ class AccountsController @Inject()(cc: ControllerComponents)
     AccountLoader.findById(accountId) match {
       case Right(account) =>
         Ok(Json.toJson(account))
+      case Left(_: AccountNotFound) =>
+        NotFound
       case Left(_) =>
         BadRequest
     }
