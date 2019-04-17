@@ -5,7 +5,7 @@ lazy val `sl-play` = project
       guice,
       "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
     ),
-      javaOptions in Test += {
+    javaOptions in Test += {
       "-Dapplication.home=" + root.base.absolutePath
     },
   )
