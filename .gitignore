@@ -11,3 +11,7 @@ RUNNING_PID
 
 #secret config
 *.secret.conf
+
+.ivy2
+.sbt
+
