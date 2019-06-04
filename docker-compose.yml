@@ -27,6 +27,7 @@ services:
     build:
       context: .
       dockerfile: docker/play/Dockerfile
+    tty: true
     command: sbt sl-play/run
     volumes:
       - ./:/root
