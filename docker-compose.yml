@@ -1,0 +1,42 @@
+version: "3.7"
+
+services:
+
+  mysql:
+    image: mysql:8
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
+    restart: always
+    environment:
+      MYSQL_DATABASE: serious_lunch_development
+      MYSQL_ROOT_PASSWORD: serious_lunch
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  flyway:
+    image: boxfuse/flyway:5.2.4
+    command: -connectRetries=60 migrate
+    volumes:
+      - ./docker/flyway/sql:/flyway/sql
+      - ./docker/flyway/conf:/flyway/conf
+    depends_on:
+      - mysql
+
+  play:
+    build:
+      context: .
+      dockerfile: docker/play/Dockerfile
+    tty: true
+    command: sbt sl-play/run
+    restart: always
+    volumes:
+      - ./:/root
+      - ./docker/play/resources:/root/resources
+    ports:
+      - 9000:9000
+    depends_on:
+      - mysql
+
+volumes:
+  mysql:
