@@ -29,6 +29,7 @@ services:
       dockerfile: docker/play/Dockerfile
     tty: true
     command: sbt sl-play/run
+    restart: always
     volumes:
       - ./:/root
     ports:
