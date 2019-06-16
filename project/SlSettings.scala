@@ -5,7 +5,7 @@ import sbt.Def.SettingList
 object SlSettings {
   lazy val commons = new SettingList(
     Seq(
-      scalaVersion := "2.12.8",
+      scalaVersion := "2.13.0",
       scalacOptions ++= Seq(
         "-deprecation",
         "-feature",
