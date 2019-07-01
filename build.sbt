@@ -3,7 +3,7 @@ lazy val `sl-play` = project
   .settings(
     libraryDependencies ++= Seq(
       guice,
-      "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
+      "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test,
     ),
     javaOptions in Test += {
       "-Dapplication.home=" + root.base.absolutePath
@@ -29,10 +29,11 @@ lazy val `sl-repository` = project
 
 lazy val `sl-model` = project
   .settings(version := "1.0-SNAPSHOT")
+  .settings(SlSettings.commons)
   .settings(ScalikeSettings.commons)
   .settings(
     libraryDependencies ++= Seq(
-      "ai.x" %% "play-json-extensions" % "0.30.1",
+      "ai.x" %% "play-json-extensions" % "0.40.2",
     ))
 
 lazy val `sl-tester` = project.aggregate(

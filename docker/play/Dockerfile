@@ -7,7 +7,7 @@
 FROM openjdk:11
 
 # Env variables
-ENV SCALA_VERSION 2.12.8
+ENV SCALA_VERSION 2.13.0
 ENV SBT_VERSION 1.2.8
 
 # Install Scala
