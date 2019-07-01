@@ -3,7 +3,7 @@ lazy val `sl-play` = project
   .settings(
     libraryDependencies ++= Seq(
       guice,
-      "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
+      "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test,
     ),
     javaOptions in Test += {
       "-Dapplication.home=" + root.base.absolutePath
