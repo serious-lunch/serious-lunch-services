@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS serious_lunch_development DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin;
+CREATE DATABASE IF NOT EXISTS serious_lunch_test DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin;

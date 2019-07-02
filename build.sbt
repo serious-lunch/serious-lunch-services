@@ -3,6 +3,8 @@ lazy val `sl-play` = project
   .settings(
     libraryDependencies ++= Seq(
       guice,
+      evolutions,
+      jdbc,
       "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test,
     ),
     javaOptions in Test += {
