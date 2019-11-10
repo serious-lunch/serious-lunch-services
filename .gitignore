@@ -7,6 +7,7 @@ target
 .classpath
 .project
 .settings
+.cache
 RUNNING_PID
 
 #secret config
